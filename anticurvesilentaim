@@ -1,0 +1,16 @@
+function AntiCurve()
+    local character = game.Players.LocalPlayer.Character
+    if Qory.Misc.AntiCurve and character and character.PrimaryPart then
+        local characterCf = character.PrimaryPart.CFrame
+        local target = self.Character.HumanoidRootPart
+        local targetPos = target.Position
+        local charPos = character.PrimaryPart.Position
+        character:SetPrimaryPartCFrame(CFrame.lookAt(charPos, v3(targetPos.X, charPos.Y, targetPos.Z)))
+        wait()
+        character:SetPrimaryPartCFrame(characterCf)
+    end
+end
+
+
+
+    
